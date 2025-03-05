@@ -23,7 +23,7 @@ public class UserController
 		return ResponseEntity.status(201).body(user);
 	}
 	
-	// url----> http://localhost:8080/ user-Api/user/101
+// url----> http://localhost:8080/ user-Api/user/101
 	@GetMapping("user/{userid}")
 	public ResponseEntity<UserDTO> getUserinfo(@PathVariable("userid")  int id )
 	{
@@ -33,6 +33,8 @@ public class UserController
 		UserDTO dto=us.getspecificDetail(user);
 		return ResponseEntity.status(200).body(dto);
 	}
+	
+	
     @GetMapping("user/{email}/{password}")
 	public ResponseEntity<Integer> Authantication(@Valid @PathVariable String email,@PathVariable String password)
 	{

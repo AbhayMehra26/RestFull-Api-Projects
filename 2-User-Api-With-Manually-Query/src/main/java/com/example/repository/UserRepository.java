@@ -22,13 +22,13 @@ public interface UserRepository extends JpaRepository<User, Integer>
 	@Transactional
 	@Query(value = "INSERT INTO User(id,firstname,lastname,adress,dob,email,password,phoneno)VALUES(:id,:firstname,:lastname,:adress,:dob,:e,:password,:phoneno)",nativeQuery = true)
 	void saveUser(@Valid @Param("id") int id, 
-			@Param("firstname")       String firstname,
-			@Param("lastname")	   String lastname, 
-			@Param("adress")       String adress,
-			@Param("dob")	        String dob,
-			@Param("e")	   String email,
-			@Param("password")       String password,
-			@Param("phoneno")       String phoneno);
+			      @Param("firstname")  String firstname,
+			      @Param("lastname")   String lastname, 
+			      @Param("adress")     String adress,
+			      @Param("dob")	       String dob,
+			      @Param("e")	       String email,
+			      @Param("password")   String password,
+			      @Param("phoneno")    String phoneno);
 
 
 	@Query(value = "Select * From User Where id=:id",nativeQuery = true)
