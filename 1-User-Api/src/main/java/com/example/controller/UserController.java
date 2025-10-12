@@ -35,6 +35,7 @@ public class UserController
 		return ResponseEntity.status(200).body(dto);
 	}
 	
+	// url----> http://localhost:8080/ user-Api/user/abhaymehra26@gmail.com/Abhay12334@
 	
     @GetMapping("user/{email}/{password}")
 	public ResponseEntity<Integer> Authantication(@Valid @PathVariable String email,@PathVariable String password)
@@ -46,7 +47,8 @@ public class UserController
 	    // int userid= user.getId()
 	    return ResponseEntity.status(200).body(user.getId());
 	}
-	
+
+	// url----> http://localhost:8080/ user-Api/user/102
     @PutMapping("user/{userid}")
 	public ResponseEntity<User> UpdateUserinfo(@PathVariable("userid")  int id,@RequestBody User user )
 	{
