@@ -15,7 +15,8 @@ import jakarta.validation.Valid;
 public class UserController 
 {
 	@Autowired UserService us;
-	
+
+	// url----> http://localhost:8080/ user-Api/user
 	@PostMapping("user")
 	public ResponseEntity<User> addUser(@Valid @RequestBody User user)
 	{
